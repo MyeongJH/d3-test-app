@@ -1,5 +1,7 @@
 import React from 'react';
 import UiTest from './UiTest';
+//import D3Test from './D3Test';
+import BarChart from './BarChart';
 
 function FnArr({no, ko}) {
   console.log(ko,no);
@@ -21,6 +23,7 @@ function App() {
         <FnArr no={i.no} ko={i.ko} />
       ))}
       <UiTest />
+      <BarChart />
     </div>
   );
 }
