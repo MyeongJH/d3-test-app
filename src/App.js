@@ -1,4 +1,5 @@
 import React from 'react';
+import UiTest from './UiTest';
 
 function FnArr({no, ko}) {
   console.log(ko,no);
@@ -19,6 +20,7 @@ function App() {
       {arr.map( i => (
         <FnArr no={i.no} ko={i.ko} />
       ))}
+      <UiTest />
     </div>
   );
 }
