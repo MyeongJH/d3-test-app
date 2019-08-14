@@ -14,7 +14,7 @@ const w = 500 , h = 600
 class TreeMap extends Component {
     componentDidMount() {
         // console.log(TreeData2);
-        this.drawChart(TreeData2);
+        this.drawChart(TreeData);
     }
 
     dataTree = data => d3.treemap()

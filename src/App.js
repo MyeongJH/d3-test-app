@@ -29,7 +29,7 @@ function App() {
     <div>
       {/* <FnTo/> */}
       {/* <UiTest /> */}
-      {/* <BarChart /> */}
+      <BarChart />
       <BubbleChart /> 
       <TreeMap />
     </div>
