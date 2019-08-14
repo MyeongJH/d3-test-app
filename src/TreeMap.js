@@ -1,33 +1,37 @@
 import React, {Component} from 'react';
 // eslint-disable-next-line
-import ReactDOM from "react-dom";
+import TreeData from "./data/TreeData"
+// eslint-disable-next-line
+import TreeData2 from "./data/TreeData2"
 import { uid } from "react-uid";
 import * as d3 from "d3";
 
 const w = 500 , h = 600
      ,color = d3.scaleOrdinal(d3.schemeCategory10)
-     ,format = d3.format(",d");
+     ,format = d3.format(",d")     
+     ;
 
 class TreeMap extends Component {
     componentDidMount() {
-        this.drawChart();
+        // console.log(TreeData2);
+        this.drawChart(TreeData2);
     }
 
     dataTree = data => d3.treemap()
                          .size([w, h])
                          .padding(1)
-                         .round(true)(d3.hierarchy(data)
-                         .sum(d => d.value)
-                         .sort((a, b) => b.value - a.value));
+                         .round(true)(
+                             d3.hierarchy(data)
+                            .sum(d => d.value)
+                            .sort((a, b) => b.value - a.value));
 
-    drawChart() {
-        const data = d3.json("https://raw.githubusercontent.com/d3/d3-hierarchy/v1.1.8/test/data/flare.json");
+    drawChart(data) {
+        //const data = d3.json("https://raw.githubusercontent.com/d3/d3-hierarchy/v1.1.8/test/data/flare.json");
         const root = this.dataTree(data);
-        console.log(root);
-
+        // console.log(root);
         const svg = d3.select("#treeMap").append("svg")
                       .attr("viewBox", [0, 0, w, h])
-                      .style("font", "10px D2Coding");
+                      .style("font", "7px D2Coding");
 
         const leaf = svg.selectAll("g")
                         .data(root.leaves())
@@ -49,16 +53,15 @@ class TreeMap extends Component {
             .append("use")
             .attr("xlink:href", d => d.leafUid.href);
     
-        leaf.append("svg:text")
+        leaf.append("text")
             .attr("clip-path", d => d.clipUid)
             .selectAll("tspan")
-            //.data(d => d.data.name.split(/(?=[A-Z][^A-Z])/g).concat(format(d.value)))
+            .data(d => d.data.name.split(/(?=[A-Z][^A-Z])/g).concat(format(d.value)))
             .join("tspan")
             .attr("x", 3)
             .attr("y", (d, i, nodes) => `${(i === nodes.length - 1) * 0.3 + 1.1 + i * 0.9}em`)
             .attr("fill-opacity", (d, i, nodes) => i === nodes.length - 1 ? 0.7 : null)
             .text(d => d);
-        svg.node();    
     }
 
     render() {
