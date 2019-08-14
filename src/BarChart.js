@@ -7,15 +7,16 @@ class BarChart extends Component {
     }
       
     drawChart() {
-      const data = [12, 5, 6, 6, 9, 5]
+      const data = [0.5, 0.7,1,2,3,4,5,6,7,8,9,9,10]
             ,h = 130 , w = 700
-            ,svg = d3.select("body").append("svg").attr("width", w).attr("height", h);      
-                    
+            ,svg = d3.select("#barCart").append("svg").attr("width", w).attr("height", h);
+
       svg.selectAll("rect")
         .data(data)
         .enter()
         .append("rect")
-        .attr("x", (d, i) => i * 50)
+        .attr("key", (d, i) => i)
+        .attr("x", (d, i) => i * 40)
         .attr("y", (d, i) => h - 10 * d)
         .attr("width", 25)
         .attr("height", (d, i) => d * 10)
@@ -23,7 +24,7 @@ class BarChart extends Component {
     }
           
     render(){
-      return <div id={"#" + this.props.id}></div> 
+      return <div id="barCart"></div> 
     }
   }
       
