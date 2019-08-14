@@ -1,9 +1,10 @@
 import React from 'react';
 import UiTest from './UiTest';
 import BarChart from './BarChart';
+import TreeMap from './TreeMap';
 
 function FnArr({no, ko}) {
-  console.log(ko,no);
+  // console.log(ko,no);
   return <h3>no {no} ko {ko}</h3>
 }
 
@@ -23,6 +24,7 @@ function App() {
       ))}
       <UiTest />
       <BarChart />
+      <TreeMap />
     </div>
   );
 }

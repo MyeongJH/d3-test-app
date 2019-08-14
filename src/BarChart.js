@@ -15,7 +15,6 @@ class BarChart extends Component {
         .data(data)
         .enter()
         .append("rect")
-        .attr("key", (d, i) => i)
         .attr("x", (d, i) => i * 40)
         .attr("y", (d, i) => h - 10 * d)
         .attr("width", 25)
