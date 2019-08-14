@@ -15,14 +15,14 @@ class BubbleChart extends Component {
                      .size([w - 2, h - 2])
                      .padding(3)(
                         d3.hierarchy({children: data})
-                        .sum(d => d.value))   
+                        .sum(d => d.value))
     
     toData = data => 
          data.split("\n").map(d => ({
                 name: d.split(",")[0].split(".").pop()
                 , title: d.split(",")[0].replace(/\./g, "/")
                 , group: d.split(",")[0].split(".")[1]
-                , value: +d.split(",")[1]}))    
+                , value: +d.split(",")[1]}))
 
     drawChart() {
         const data = this.toData(BubbleData)
