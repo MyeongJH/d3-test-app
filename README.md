@@ -1,3 +1,3 @@
-# Movie App 2019
+# D3 Test App 2019
 
-React JS Fundamentals Course
+React, D3.js
