@@ -26,6 +26,8 @@ class TidyTree extends Component {
           if (d.x > x1) x1 = d.x;
           if (d.x < x0) x0 = d.x;
         });
+        console.log(root);
+        
 
         const svg = d3.select("#tidyTree").append("svg")
             .attr("viewBox", [0, 0, w, x1 - x0 + root.dx * 2]);

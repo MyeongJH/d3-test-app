@@ -16,14 +16,11 @@ const arr = [
 ];
 
 function FnArr({no, ko}) {
-  // console.log(ko,no);
-  return <h3>no {no} ko {ko}</h3>
+  return <h3>no : {no}, ko : {ko}</h3>
 }
 
-function FnTo() {  
-  return (arr.map( i => (
-    <FnArr no={i.no} ko={i.ko} />
-    )))
+function FnTo() {
+  return arr.map(i => (<FnArr no={i.no} ko={i.ko} />))
 }
 
 function ToBarChart() {

@@ -15,8 +15,8 @@ class CirclePacking extends Component {
 
     pack = data => d3.pack()
         .size([w - 2, h - 2])
-        .padding(3)
-        (d3.hierarchy(data)
+        .padding(3)(
+            d3.hierarchy(data)
             .sum(d => d.value)
             .sort((a, b) => b.value - a.value))
 
