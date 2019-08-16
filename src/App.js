@@ -5,6 +5,7 @@ import BarChart from './BarChart';
 import TreeMap from './TreeMap';
 import BubbleChart from './BubbleChart';
 import TidyTree from './TidyTree';
+import CirclePacking from './CirclePacking';
 
 const arr = [
   {no : 1, ko : 'ㄱ', en : 'a'}
@@ -41,6 +42,10 @@ function ToTidyTree() {
   return <TidyTree />
 }
 
+function ToCirclePacking() {
+  return <CirclePacking />
+}
+
 function App() {
   return (
     <Router>
@@ -50,6 +55,7 @@ function App() {
         <li><Link to="/BubbleChart">BubbleChart</Link></li>
         <li><Link to="/TreeMap">TreeMap</Link></li>
         <li><Link to="/TidyTree">TidyTree</Link></li>
+        <li><Link to="/CirclePacking">CirclePacking</Link></li>
       </ul>
 
       <Route exact path="/" component={FnTo} />
@@ -57,6 +63,7 @@ function App() {
       <Route path="/BubbleChart" component={ToBubbleChart} />
       <Route path="/TreeMap" component={ToTreeMap} />
       <Route path="/TidyTree" component={ToTidyTree} />
+      <Route path="/CirclePacking" component={ToCirclePacking} />
     </Router>
   );
 }

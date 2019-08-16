@@ -18,6 +18,8 @@ class TidyTree extends Component {
 
     drawChart() {
         const root = this.tree(data);
+        console.log(root);        
+
         let x0 = Infinity;
         let x1 = -x0;
         root.each(d => {
