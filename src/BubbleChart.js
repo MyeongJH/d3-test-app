@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { uid } from "react-uid";
 import * as d3 from "d3";
 import BubbleData from "./data/BubbleData";
+import BubbleData2 from "./data/BubbleData2";
 
 const w = 932 , h = 932
      ,color = d3.scaleOrdinal(d3.schemeCategory10);
@@ -23,16 +24,26 @@ class BubbleChart extends Component {
                 , title: d.split(",")[0].replace(/\./g, "/")
                 , group: d.split(",")[0].split(".")[1]
                 , value: +d.split(",")[1]}))
-
+    
+    toDataUseD3 = data => d3.csvParse(data, d => ({
+        name    : d.id.split(".").pop(),
+        title   : d.id.replace(/\./g, "/"),
+        group   : d.id.split(".")[1],
+        value   : +d.value
+    }))
+    
     drawChart() {
-        const data = this.toData(BubbleData)
+        const data = this.toDataUseD3(BubbleData)
              ,format = d3.format(",d")
              ,root = this.pack(data);
+        
+        // console.log(this.toData(BubbleData2));
+        // console.log(this.toDataUseD3(BubbleData2));
 
         const svg = d3.select("#bubbleChart").append("svg")
             .attr("viewBox", [0, 0, w, h])
             .attr("font-size", 10)
-            .attr("font-family", "consolas")
+            .attr("font-family", "D2Coding")
             .attr("text-anchor", "middle");
 
         const leaf = svg.selectAll("g")

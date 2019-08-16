@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 // eslint-disable-next-line
-import TreeData from "./data/TreeData"
+import TreeData from "./data/TreeMapData"
 // eslint-disable-next-line
-import TreeData2 from "./data/TreeData2"
+import TreeData2 from "./data/TreeMapData2"
 import { uid } from "react-uid";
 import * as d3 from "d3";
 
@@ -31,7 +31,8 @@ class TreeMap extends Component {
         // console.log(root);
         const svg = d3.select("#treeMap").append("svg")
                       .attr("viewBox", [0, 0, w, h])
-                      .style("font", "7px D2Coding");
+                      .style("font", "7px D2Coding")
+                      ;
 
         const leaf = svg.selectAll("g")
                         .data(root.leaves())
