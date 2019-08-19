@@ -28,8 +28,7 @@ class BarChart extends Component {
          .append("text")
          .text(d => d)
          .attr("x", (d, i) => i * 40)
-         .attr("y",(d, i) => h - 15 * d)
-         ;
+         .attr("y",(d, i) => h - 15 * d);
     }
           
     render(){

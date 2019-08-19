@@ -83,7 +83,7 @@ class Matrix extends Component {
             .attr("fill", d => z(d.species));
 
         svg.append("g")
-            .style("font", "bold 10px sans-serif")
+            .style("font", "bold 10px D2Coding")
             .selectAll("text")
             .data(columns)
             .join("text")

@@ -18,7 +18,7 @@ class BubbleChart extends Component {
                         d3.hierarchy({children: data})
                         .sum(d => d.value))
     
-    toData = data => 
+    toData = data =>
          data.split("\n").map(d => ({
                 name: d.split(",")[0].split(".").pop()
                 , title: d.split(",")[0].replace(/\./g, "/")
