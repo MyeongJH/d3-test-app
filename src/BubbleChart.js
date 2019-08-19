@@ -36,7 +36,7 @@ class BubbleChart extends Component {
         const data = this.toDataUseD3(BubbleData)
              ,format = d3.format(",d")
              ,root = this.pack(data);
-        
+
         // console.log(this.toData(BubbleData2));
         // console.log(this.toDataUseD3(BubbleData2));
 

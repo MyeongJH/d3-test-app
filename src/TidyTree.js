@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import * as d3 from "d3";
 import TidyTreeData from "./data/TidyTreeData";
 
 const w = 932
-     ,data = d3.hierarchy(TidyTreeData);
+    , data = d3.hierarchy(TidyTreeData);
 
 class TidyTree extends Component {
     componentDidMount() {
@@ -18,16 +18,16 @@ class TidyTree extends Component {
 
     drawChart() {
         const root = this.tree(data);
-        console.log(root);        
+        console.log(root);
 
         let x0 = Infinity;
         let x1 = -x0;
         root.each(d => {
-          if (d.x > x1) x1 = d.x;
-          if (d.x < x0) x0 = d.x;
+            if (d.x > x1) x1 = d.x;
+            if (d.x < x0) x0 = d.x;
         });
         console.log(root);
-        
+
 
         const svg = d3.select("#tidyTree").append("svg")
             .attr("viewBox", [0, 0, w, x1 - x0 + root.dx * 2]);
@@ -37,7 +37,7 @@ class TidyTree extends Component {
             .attr("font-size", 10)
             .attr("transform", `translate(${root.dy / 3},${root.dx - x0})`);
 
-        const link = g.append("g")
+        g.append("g")
             .attr("fill", "none")
             .attr("stroke", "#555")
             .attr("stroke-opacity", 0.4)

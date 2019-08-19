@@ -6,6 +6,7 @@ import TreeMap from './TreeMap';
 import BubbleChart from './BubbleChart';
 import TidyTree from './TidyTree';
 import CirclePacking from './CirclePacking';
+import Matrix from './Matrix';
 
 const arr = [
   {no : 1, ko : 'ㄱ', en : 'a'}
@@ -20,7 +21,12 @@ function FnArr({no, ko}) {
 }
 
 function FnTo() {
-  return arr.map(i => (<FnArr no={i.no} ko={i.ko} />))
+  return (
+    <div>
+      {arr.map(i => (<FnArr no={i.no} ko={i.ko} />))}
+      <UiTest />
+    </div>
+  )
 }
 
 function ToBarChart() {
@@ -43,6 +49,10 @@ function ToCirclePacking() {
   return <CirclePacking />
 }
 
+function ToMatrix() {
+  return <Matrix />
+}
+
 function App() {
   return (
     <Router>
@@ -53,6 +63,7 @@ function App() {
         <li><Link to="/TreeMap">TreeMap</Link></li>
         <li><Link to="/TidyTree">TidyTree</Link></li>
         <li><Link to="/CirclePacking">CirclePacking</Link></li>
+        <li><Link to="/Matrix">Matrix</Link></li>
       </ul>
 
       <Route exact path="/" component={FnTo} />
@@ -61,23 +72,9 @@ function App() {
       <Route path="/TreeMap" component={ToTreeMap} />
       <Route path="/TidyTree" component={ToTidyTree} />
       <Route path="/CirclePacking" component={ToCirclePacking} />
+      <Route path="/Matrix" component={ToMatrix} />
     </Router>
   );
 }
-
-// class App extends React.Component {
-//   render() {
-//     return (
-//       <div>
-//         {/* <FnTo/> */}
-//         {/* <UiTest /> */}        
-//         <BarChart />
-//         <BubbleChart /> 
-//         <TreeMap />
-//         <TidyTree />
-//       </div>
-//     )
-//   };
-// }
 
 export default App;
