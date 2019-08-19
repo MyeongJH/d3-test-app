@@ -8,6 +8,7 @@ import TidyTree from './TidyTree';
 import CirclePacking from './CirclePacking';
 import ZoomCirclePacking from './ZoomCirclePacking'
 import Matrix from './Matrix';
+import HierarchiBar from './HierarchiBar';
 
 const arr = [
   {no : 1, ko : 'ㄱ', en : 'a'}
@@ -58,6 +59,10 @@ function ToMatrix() {
   return <Matrix />
 }
 
+function ToHierarchiBar() {
+  return <HierarchiBar />
+}
+
 function App() {
   return (
     <Router>
@@ -70,6 +75,7 @@ function App() {
         <li><Link to="/CirclePacking">CirclePacking</Link></li>
         <li><Link to="/ZoomCirclePacking">ZoomCirclePacking</Link></li>
         <li><Link to="/Matrix">Matrix</Link></li>
+        <li><Link to="/hierarchiBar">hierarchiBar</Link></li>
       </ul>
 
       <Route exact path="/" component={FnTo} />
@@ -79,7 +85,8 @@ function App() {
       <Route path="/TidyTree" component={ToTidyTree} />
       <Route path="/CirclePacking" component={ToCirclePacking} />
       <Route path="/ZoomCirclePacking" component={ToZoomCirclePacking} />
-      <Route path="/Matrix" component={ToMatrix} />      
+      <Route path="/Matrix" component={ToMatrix} />
+      <Route path="/HierarchiBar" component={ToHierarchiBar} />
     </Router>
   );
 }
