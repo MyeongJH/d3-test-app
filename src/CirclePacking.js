@@ -53,7 +53,7 @@ class CirclePacking extends Component {
             .data(d => d.values)
             .join("g")
             .attr("transform", d => `translate(${d.x + 1},${d.y + 1})`)
-            .attr("pointer-events", d => !d.children ? "none" : null)
+            // .attr("pointer-events", d => !d.children ? "none" : null)
             .on("mouseover", function () { d3.select(this).attr("stroke", "black"); })
             .on("mouseout", function () { d3.select(this).attr("stroke", null); })
             .on("click", d => focus !== d && (zoom(d), d3.event.stopPropagation()));;
