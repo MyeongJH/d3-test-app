@@ -1,4 +1,4 @@
-const TreeData = {
+const FlareData = {
     "name": "flare",
     "children": [
      {
@@ -377,6 +377,6 @@ const TreeData = {
       ]
      }
     ]
-   };
+   }
 
-export default TreeData;
+export default FlareData;

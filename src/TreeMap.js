@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
-// eslint-disable-next-line
-import TreeData from "./data/TreeMapData"
-// eslint-disable-next-line
-import TreeData2 from "./data/TreeMapData2"
+import TreeData from "./data/FlareData"
 import { uid } from "react-uid";
 import * as d3 from "d3";
 
@@ -13,7 +10,6 @@ const w = 500 , h = 600
 
 class TreeMap extends Component {
     componentDidMount() {
-        // console.log(TreeData2);
         this.drawChart(TreeData);
     }
 
@@ -25,10 +21,8 @@ class TreeMap extends Component {
                             .sum(d => d.value)
                             .sort((a, b) => b.value - a.value));
 
-    drawChart(data) {
-        //const data = d3.json("https://raw.githubusercontent.com/d3/d3-hierarchy/v1.1.8/test/data/flare.json");
-        const root = this.dataTree(data);
-        // console.log(root);
+    drawChart(data) {        
+        const root = this.dataTree(data);        
         const svg = d3.select("#treeMap").append("svg")
                       .attr("viewBox", [0, 0, w, h])
                       .style("font", "7px D2Coding")

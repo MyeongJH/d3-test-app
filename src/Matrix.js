@@ -77,7 +77,7 @@ class Matrix extends Component {
                 .attr("cy", d => y[j](d[columns[j]]));
         });
 
-        const circle = cell.selectAll("circle")
+        cell.selectAll("circle")
             .attr("r", 3.5)
             .attr("fill-opacity", 0.7)
             .attr("fill", d => z(d.species));

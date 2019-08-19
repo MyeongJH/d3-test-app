@@ -6,6 +6,7 @@ import TreeMap from './TreeMap';
 import BubbleChart from './BubbleChart';
 import TidyTree from './TidyTree';
 import CirclePacking from './CirclePacking';
+import ZoomCirclePacking from './ZoomCirclePacking'
 import Matrix from './Matrix';
 
 const arr = [
@@ -49,6 +50,10 @@ function ToCirclePacking() {
   return <CirclePacking />
 }
 
+function ToZoomCirclePacking() {
+  return <ZoomCirclePacking />
+}
+
 function ToMatrix() {
   return <Matrix />
 }
@@ -63,6 +68,7 @@ function App() {
         <li><Link to="/TreeMap">TreeMap</Link></li>
         <li><Link to="/TidyTree">TidyTree</Link></li>
         <li><Link to="/CirclePacking">CirclePacking</Link></li>
+        <li><Link to="/ZoomCirclePacking">ZoomCirclePacking</Link></li>
         <li><Link to="/Matrix">Matrix</Link></li>
       </ul>
 
@@ -72,7 +78,8 @@ function App() {
       <Route path="/TreeMap" component={ToTreeMap} />
       <Route path="/TidyTree" component={ToTidyTree} />
       <Route path="/CirclePacking" component={ToCirclePacking} />
-      <Route path="/Matrix" component={ToMatrix} />
+      <Route path="/ZoomCirclePacking" component={ToZoomCirclePacking} />
+      <Route path="/Matrix" component={ToMatrix} />      
     </Router>
   );
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as d3 from "d3";
-import TidyTreeData from "./data/TidyTreeData";
+import TidyTreeData from "./data/FlareData";
 
 const w = 932
     , data = d3.hierarchy(TidyTreeData);
