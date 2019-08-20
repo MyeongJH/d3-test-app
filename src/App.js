@@ -37,27 +37,56 @@ function App() {
     <Router>
       <ul>
         <li><Link to={baseUrl}>Home</Link></li>
-        <li><Link to={baseUrl+"BarChart"}>BarChart</Link></li>
-        <li><Link to={baseUrl+"BubbleChart"}>BubbleChart</Link></li>
-        <li><Link to={baseUrl+"TreeMap"}>TreeMap</Link></li>
-        <li><Link to={baseUrl+"TidyTree"}>TidyTree</Link></li>
-        <li><Link to={baseUrl+"CirclePacking"}>CirclePacking</Link></li>
-        <li><Link to={baseUrl+"ZoomCirclePacking"}>ZoomCirclePacking</Link></li>
-        <li><Link to={baseUrl+"Matrix"}>Matrix</Link></li>
-        <li><Link to={baseUrl+"HierarchiBar"}>HierarchiBar</Link></li>
+        {routes.map((r, i) => <li key={i}><Link to={r.path}>{r.name}</Link></li>)}
       </ul>
 
       <Route exact path={baseUrl} render={()=><FnTo />} />
-      <Route path={baseUrl+"BarChart"} render={()=><BarChart />} />
-      <Route path={baseUrl+"BubbleChart"} render={()=><BubbleChart />} />
-      <Route path={baseUrl+"TreeMap"} render={()=><TreeMap />} />
-      <Route path={baseUrl+"TidyTree"} render={()=><TidyTree />} />
-      <Route path={baseUrl+"CirclePacking"} render={()=><CirclePacking />} />
-      <Route path={baseUrl+"ZoomCirclePacking"} render={()=><ZoomCirclePacking />} />
-      <Route path={baseUrl+"Matrix"} render={()=><Matrix />} />
-      <Route path={baseUrl+"HierarchiBar"} render={()=><HierarchiBar />} />
+      {routes.map((r, i) => <Route path={r.path} render={r.render} key={i} />)}
     </Router>
   );
 }
+
+const routes = [
+  {
+    name: "BarChart",
+    path: baseUrl+"BarChart",
+    render: ()=><BarChart />
+  },
+  {
+    name: "BubbleChart",
+    path: baseUrl+"BubbleChart",
+    render: ()=><BubbleChart />
+  },
+  {
+    name: "TreeMap",
+    path: baseUrl+"TreeMap",
+    render: ()=><TreeMap />
+  },
+  {
+    name: "TidyTree",
+    path: baseUrl+"TidyTree",
+    render: ()=><TidyTree />
+  },
+  {
+    name: "CirclePacking",
+    path: baseUrl+"CirclePacking",
+    render: ()=><CirclePacking />
+  },
+  {
+    name: "ZoomCirclePacking",
+    path: baseUrl+"ZoomCirclePacking",
+    render: ()=><ZoomCirclePacking />
+  },
+  {
+    name: "Matrix",
+    path: baseUrl+"Matrix",
+    render: ()=><Matrix />
+  },
+  {
+    name: "HierarchiBar",
+    path: baseUrl+"HierarchiBar",
+    render: ()=><HierarchiBar />
+  }
+];
 
 export default App;
