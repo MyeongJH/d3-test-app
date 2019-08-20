@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as d3 from "d3";
-import data from "./data/FlareData";
+import data from "../data/FlareData";
 
 const margin = ({ top: 30, right: 30, bottom: 0, left: 100 })
     , barStep = 27

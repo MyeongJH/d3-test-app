@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { uid } from "react-uid";
 import * as d3 from "d3";
-import CircleData from "./data/FlareData";
+import CircleData from "../data/FlareData";
 
 const w = 975, h = 975
     , color = d3.scaleSequential([8, 0], d3.interpolateMagma)

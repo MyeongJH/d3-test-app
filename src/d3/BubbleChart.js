@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { uid } from "react-uid";
 import * as d3 from "d3";
-import BubbleData from "./data/BubbleData";
+import BubbleData from "../data/BubbleData";
 
 const w = 932 , h = 932
      ,color = d3.scaleOrdinal(d3.schemeCategory10);

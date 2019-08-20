@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import TreeData from "./data/FlareData"
+import TreeData from "../data/FlareData"
 import { uid } from "react-uid";
 import * as d3 from "d3";
 

@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import UiTest from './UiTest';
-import BarChart from './BarChart';
-import TreeMap from './TreeMap';
-import BubbleChart from './BubbleChart';
-import TidyTree from './TidyTree';
-import CirclePacking from './CirclePacking';
-import ZoomCirclePacking from './ZoomCirclePacking'
-import Matrix from './Matrix';
-import HierarchiBar from './HierarchiBar';
+import BarChart from './d3/BarChart';
+import TreeMap from './d3/TreeMap';
+import BubbleChart from './d3/BubbleChart';
+import TidyTree from './d3/TidyTree';
+import CirclePacking from './d3/CirclePacking';
+import ZoomCirclePacking from './d3/ZoomCirclePacking'
+import Matrix from './d3/Matrix';
+import HierarchiBar from './d3/HierarchiBar';
 
 const baseUrl = '/d3-test-app/';
 const arr = [

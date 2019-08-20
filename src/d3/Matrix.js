@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as d3 from "d3";
-import MatrixData from "./data/MatrixData";
+import MatrixData from "../data/MatrixData";
 
 const data = d3.csvParse(MatrixData, d3.autoType)
     , columns = data.columns.filter(d => d !== "species")
