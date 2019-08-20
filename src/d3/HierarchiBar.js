@@ -15,8 +15,6 @@ const margin = ({ top: 30, right: 30, bottom: 0, left: 100 })
         .eachAfter(d => d.index = d.parent ? d.parent.index = d.parent.index + 1 || 0 : 0)
     ;
 
-
-
 class HierarchiBar extends Component {
     componentDidMount() {
         this.drawChart();
@@ -38,12 +36,8 @@ class HierarchiBar extends Component {
             .attr("cursor", "pointer")
             .on("click", d => up(svg, d));
 
-        svg.append("g")
-            .call(xAxis);
-
-        svg.append("g")
-            .call(yAxis);
-
+        svg.append("g").call(xAxis);
+        svg.append("g").call(yAxis);
         down(svg, root);
 
         function bar(svg, down, d, selector) {
