@@ -3,14 +3,14 @@ import axios from 'axios';
 
 function UiTest() {
   const [a, setA] = useState(1);
-  const [b, setB] = useState(2);
+  const [b, setB] = useState(1);
 
-  function handleChangeA(event) {
-    setA(+event.target.value);
+  function handleChangeA({target}) {
+    setA(+target.value);
   }
 
-  function handleChangeB(event) {
-    setB(+event.target.value);
+  function handleChangeB({target}) {
+    setB(+target.value);
   }
 
   return (
