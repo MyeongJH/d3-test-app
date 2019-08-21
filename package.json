@@ -1,5 +1,5 @@
 {
-  "name": "d3-test-app",
+  "name": "react-d3-test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
