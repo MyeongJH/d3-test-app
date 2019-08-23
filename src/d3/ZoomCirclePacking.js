@@ -56,7 +56,6 @@ class ZoomCirclePacking extends Component {
 
         function zoomTo(v) {
             const k = w / v[2];
-
             view = v;
 
             label.attr("transform", d => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k})`);
