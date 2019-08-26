@@ -5,18 +5,18 @@ function UiTest() {
   const [a, setA] = useState(1);
   const [b, setB] = useState(1);
 
-  function handleChangeA({target}) {
+  function handleChangeA({ target }) {
     setA(+target.value);
   }
 
-  function handleChangeB({target}) {
+  function handleChangeB({ target }) {
     setB(+target.value);
   }
 
   return (
     <div>
-      <input type="number" value={a} onChange={handleChangeA}/><br></br>
-      <input type="number" value={b} onChange={handleChangeB}/>
+      <input type="number" value={a} onChange={handleChangeA} /><br></br>
+      <input type="number" value={b} onChange={handleChangeB} />
 
       <p>{a} + {b} = {a + b}</p>
 
@@ -32,18 +32,18 @@ class ReTest extends React.Component {
   };
 
   getMovies = async () => {
-    const {data:{data:{movies}}} = await axios.get("https://yts-proxy.now.sh/list_movies.json");
+    const { data: { data: { movies } } } = await axios.get("https://yts-proxy.now.sh/list_movies.json");
     console.log(movies);
-    this.setState({movies, isLoading: false});
+    this.setState({ movies, isLoading: false });
   }
 
   componentDidMount() {
     this.getMovies();
   }
-  
+
   render() {
-    const {isLoading} = this.state;
-    return <div>{isLoading? "Loding": "Ready"}</div>
+    const { isLoading } = this.state;
+    return <div>{isLoading ? "Loding" : "Ready"}</div>
   }
 }
 
