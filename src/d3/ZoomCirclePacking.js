@@ -16,7 +16,7 @@ class ZoomCirclePacking extends Component {
                 .sum(d => d.value)
                 .sort((a, b) => b.value - a.value))
 
-    color = d3.scaleSequential([7, 0], d3.interpolateMagma);
+    color = d3.scaleSequential([7, 0], d3.interpolateWarm);
 
     drawChart() {
         const root = this.pack(CircleData);
