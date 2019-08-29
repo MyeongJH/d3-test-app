@@ -1,4 +1,5 @@
-const FlareData = {
+const FlareData = 
+{
     "name": "flare",
     "children": [
      {
