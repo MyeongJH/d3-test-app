@@ -1,154 +1,197 @@
 const MatrixData =
-`sepalLength,sepalWidth,petalLength,petalWidth,species
-5.1,3.5,1.4,0.2,setosa
-4.9,3,1.4,0.2,setosa
-4.7,3.2,1.3,0.2,setosa
-4.6,3.1,1.5,0.2,setosa
-5,3.6,1.4,0.2,setosa
-5.4,3.9,1.7,0.4,setosa
-4.6,3.4,1.4,0.3,setosa
-5,3.4,1.5,0.2,setosa
-4.4,2.9,1.4,0.2,setosa
-4.9,3.1,1.5,0.1,setosa
-5.4,3.7,1.5,0.2,setosa
-4.8,3.4,1.6,0.2,setosa
-4.8,3,1.4,0.1,setosa
-4.3,3,1.1,0.1,setosa
-5.8,4,1.2,0.2,setosa
-5.7,4.4,1.5,0.4,setosa
-5.4,3.9,1.3,0.4,setosa
-5.1,3.5,1.4,0.3,setosa
-5.7,3.8,1.7,0.3,setosa
-5.1,3.8,1.5,0.3,setosa
-5.4,3.4,1.7,0.2,setosa
-5.1,3.7,1.5,0.4,setosa
-4.6,3.6,1,0.2,setosa
-5.1,3.3,1.7,0.5,setosa
-4.8,3.4,1.9,0.2,setosa
-5,3,1.6,0.2,setosa
-5,3.4,1.6,0.4,setosa
-5.2,3.5,1.5,0.2,setosa
-5.2,3.4,1.4,0.2,setosa
-4.7,3.2,1.6,0.2,setosa
-4.8,3.1,1.6,0.2,setosa
-5.4,3.4,1.5,0.4,setosa
-5.2,4.1,1.5,0.1,setosa
-5.5,4.2,1.4,0.2,setosa
-4.9,3.1,1.5,0.2,setosa
-5,3.2,1.2,0.2,setosa
-5.5,3.5,1.3,0.2,setosa
-4.9,3.6,1.4,0.1,setosa
-4.4,3,1.3,0.2,setosa
-5.1,3.4,1.5,0.2,setosa
-5,3.5,1.3,0.3,setosa
-4.5,2.3,1.3,0.3,setosa
-4.4,3.2,1.3,0.2,setosa
-5,3.5,1.6,0.6,setosa
-5.1,3.8,1.9,0.4,setosa
-4.8,3,1.4,0.3,setosa
-5.1,3.8,1.6,0.2,setosa
-4.6,3.2,1.4,0.2,setosa
-5.3,3.7,1.5,0.2,setosa
-5,3.3,1.4,0.2,setosa
-7,3.2,4.7,1.4,versicolor
-6.4,3.2,4.5,1.5,versicolor
-6.9,3.1,4.9,1.5,versicolor
-5.5,2.3,4,1.3,versicolor
-6.5,2.8,4.6,1.5,versicolor
-5.7,2.8,4.5,1.3,versicolor
-6.3,3.3,4.7,1.6,versicolor
-4.9,2.4,3.3,1,versicolor
-6.6,2.9,4.6,1.3,versicolor
-5.2,2.7,3.9,1.4,versicolor
-5,2,3.5,1,versicolor
-5.9,3,4.2,1.5,versicolor
-6,2.2,4,1,versicolor
-6.1,2.9,4.7,1.4,versicolor
-5.6,2.9,3.6,1.3,versicolor
-6.7,3.1,4.4,1.4,versicolor
-5.6,3,4.5,1.5,versicolor
-5.8,2.7,4.1,1,versicolor
-6.2,2.2,4.5,1.5,versicolor
-5.6,2.5,3.9,1.1,versicolor
-5.9,3.2,4.8,1.8,versicolor
-6.1,2.8,4,1.3,versicolor
-6.3,2.5,4.9,1.5,versicolor
-6.1,2.8,4.7,1.2,versicolor
-6.4,2.9,4.3,1.3,versicolor
-6.6,3,4.4,1.4,versicolor
-6.8,2.8,4.8,1.4,versicolor
-6.7,3,5,1.7,versicolor
-6,2.9,4.5,1.5,versicolor
-5.7,2.6,3.5,1,versicolor
-5.5,2.4,3.8,1.1,versicolor
-5.5,2.4,3.7,1,versicolor
-5.8,2.7,3.9,1.2,versicolor
-6,2.7,5.1,1.6,versicolor
-5.4,3,4.5,1.5,versicolor
-6,3.4,4.5,1.6,versicolor
-6.7,3.1,4.7,1.5,versicolor
-6.3,2.3,4.4,1.3,versicolor
-5.6,3,4.1,1.3,versicolor
-5.5,2.5,4,1.3,versicolor
-5.5,2.6,4.4,1.2,versicolor
-6.1,3,4.6,1.4,versicolor
-5.8,2.6,4,1.2,versicolor
-5,2.3,3.3,1,versicolor
-5.6,2.7,4.2,1.3,versicolor
-5.7,3,4.2,1.2,versicolor
-5.7,2.9,4.2,1.3,versicolor
-6.2,2.9,4.3,1.3,versicolor
-5.1,2.5,3,1.1,versicolor
-5.7,2.8,4.1,1.3,versicolor
-6.3,3.3,6,2.5,virginica
-5.8,2.7,5.1,1.9,virginica
-7.1,3,5.9,2.1,virginica
-6.3,2.9,5.6,1.8,virginica
-6.5,3,5.8,2.2,virginica
-7.6,3,6.6,2.1,virginica
-4.9,2.5,4.5,1.7,virginica
-7.3,2.9,6.3,1.8,virginica
-6.7,2.5,5.8,1.8,virginica
-7.2,3.6,6.1,2.5,virginica
-6.5,3.2,5.1,2,virginica
-6.4,2.7,5.3,1.9,virginica
-6.8,3,5.5,2.1,virginica
-5.7,2.5,5,2,virginica
-5.8,2.8,5.1,2.4,virginica
-6.4,3.2,5.3,2.3,virginica
-6.5,3,5.5,1.8,virginica
-7.7,3.8,6.7,2.2,virginica
-7.7,2.6,6.9,2.3,virginica
-6,2.2,5,1.5,virginica
-6.9,3.2,5.7,2.3,virginica
-5.6,2.8,4.9,2,virginica
-7.7,2.8,6.7,2,virginica
-6.3,2.7,4.9,1.8,virginica
-6.7,3.3,5.7,2.1,virginica
-7.2,3.2,6,1.8,virginica
-6.2,2.8,4.8,1.8,virginica
-6.1,3,4.9,1.8,virginica
-6.4,2.8,5.6,2.1,virginica
-7.2,3,5.8,1.6,virginica
-7.4,2.8,6.1,1.9,virginica
-7.9,3.8,6.4,2,virginica
-6.4,2.8,5.6,2.2,virginica
-6.3,2.8,5.1,1.5,virginica
-6.1,2.6,5.6,1.4,virginica
-7.7,3,6.1,2.3,virginica
-6.3,3.4,5.6,2.4,virginica
-6.4,3.1,5.5,1.8,virginica
-6,3,4.8,1.8,virginica
-6.9,3.1,5.4,2.1,virginica
-6.7,3.1,5.6,2.4,virginica
-6.9,3.1,5.1,2.3,virginica
-5.8,2.7,5.1,1.9,virginica
-6.8,3.2,5.9,2.3,virginica
-6.7,3.3,5.7,2.5,virginica
-6.7,3,5.2,2.3,virginica
-6.3,2.5,5,1.9,virginica
-6.5,3,5.2,2,virginica
-6.2,3.4,5.4,2.3,virginica
-5.9,3,5.1,1.8,virginica`
+`시도,상권명,로플랫 상권ID,이번달 매출건,지난달 매출건
+서울,종로,5,61110,23447
+서울,잠실,37,60682,24146
+서울,테헤란로,14,48064,19207
+서울,동대문,2,37597,21447
+서울,강남대로,7,34719,16343
+서울,홍대합정,20,31155,20184
+서울,영등포,18,30959,15726
+서울,사당,28,26405,13896
+서울,서울역,4,24898,8915
+서울,여의도,17,24843,9967
+서울,서초역,10,21225,9282
+서울,왕십리,34,17143,10382
+서울,공덕역,16,16366,6520
+서울,용산,35,14689,7264
+서울,광화문,1,14067,6072
+서울,신촌,19,13560,9420
+서울,천호,39,13556,8250
+서울,건대입구,21,12361,7459
+서울,화곡,42,11468,6846
+서울,충무로,6,11190,3467
+서울,성신여대,30,10799,5671
+서울,명동,3,10783,5566
+서울,목동,26,10250,6982
+서울,청량리,40,10012,7666
+서울,군자,23,9787,6223
+서울,혜화동,41,9163,5481
+서울,신림1신림역,32,8468,4785
+서울,노원역,24,7900,4581
+서울,신림2서울대입구역,29,7400,4071
+서울,수유,31,6800,3754
+서울,신사역,11,6640,3227
+서울,경희대,22,6632,5154
+서울,장안동,38,6498,2721
+서울,논현역,8,5398,2411
+서울,불광역,27,4603,2873
+서울,압구정,12,4358,1844
+서울,청담,13,3835,1480
+서울,도산대로,9,2938,1151
+서울,이태원,36,2876,2645
+서울,한티역,15,2102,1406
+서울,명일역,25,1526,867
+서울,오류동역,33,858,439`
+// `sepalLength,sepalWidth,petalLength,petalWidth,species
+// 5.1,3.5,1.4,0.2,setosa
+// 4.9,3,1.4,0.2,setosa
+// 4.7,3.2,1.3,0.2,setosa
+// 4.6,3.1,1.5,0.2,setosa
+// 5,3.6,1.4,0.2,setosa
+// 5.4,3.9,1.7,0.4,setosa
+// 4.6,3.4,1.4,0.3,setosa
+// 5,3.4,1.5,0.2,setosa
+// 4.4,2.9,1.4,0.2,setosa
+// 4.9,3.1,1.5,0.1,setosa
+// 5.4,3.7,1.5,0.2,setosa
+// 4.8,3.4,1.6,0.2,setosa
+// 4.8,3,1.4,0.1,setosa
+// 4.3,3,1.1,0.1,setosa
+// 5.8,4,1.2,0.2,setosa
+// 5.7,4.4,1.5,0.4,setosa
+// 5.4,3.9,1.3,0.4,setosa
+// 5.1,3.5,1.4,0.3,setosa
+// 5.7,3.8,1.7,0.3,setosa
+// 5.1,3.8,1.5,0.3,setosa
+// 5.4,3.4,1.7,0.2,setosa
+// 5.1,3.7,1.5,0.4,setosa
+// 4.6,3.6,1,0.2,setosa
+// 5.1,3.3,1.7,0.5,setosa
+// 4.8,3.4,1.9,0.2,setosa
+// 5,3,1.6,0.2,setosa
+// 5,3.4,1.6,0.4,setosa
+// 5.2,3.5,1.5,0.2,setosa
+// 5.2,3.4,1.4,0.2,setosa
+// 4.7,3.2,1.6,0.2,setosa
+// 4.8,3.1,1.6,0.2,setosa
+// 5.4,3.4,1.5,0.4,setosa
+// 5.2,4.1,1.5,0.1,setosa
+// 5.5,4.2,1.4,0.2,setosa
+// 4.9,3.1,1.5,0.2,setosa
+// 5,3.2,1.2,0.2,setosa
+// 5.5,3.5,1.3,0.2,setosa
+// 4.9,3.6,1.4,0.1,setosa
+// 4.4,3,1.3,0.2,setosa
+// 5.1,3.4,1.5,0.2,setosa
+// 5,3.5,1.3,0.3,setosa
+// 4.5,2.3,1.3,0.3,setosa
+// 4.4,3.2,1.3,0.2,setosa
+// 5,3.5,1.6,0.6,setosa
+// 5.1,3.8,1.9,0.4,setosa
+// 4.8,3,1.4,0.3,setosa
+// 5.1,3.8,1.6,0.2,setosa
+// 4.6,3.2,1.4,0.2,setosa
+// 5.3,3.7,1.5,0.2,setosa
+// 5,3.3,1.4,0.2,setosa
+// 7,3.2,4.7,1.4,versicolor
+// 6.4,3.2,4.5,1.5,versicolor
+// 6.9,3.1,4.9,1.5,versicolor
+// 5.5,2.3,4,1.3,versicolor
+// 6.5,2.8,4.6,1.5,versicolor
+// 5.7,2.8,4.5,1.3,versicolor
+// 6.3,3.3,4.7,1.6,versicolor
+// 4.9,2.4,3.3,1,versicolor
+// 6.6,2.9,4.6,1.3,versicolor
+// 5.2,2.7,3.9,1.4,versicolor
+// 5,2,3.5,1,versicolor
+// 5.9,3,4.2,1.5,versicolor
+// 6,2.2,4,1,versicolor
+// 6.1,2.9,4.7,1.4,versicolor
+// 5.6,2.9,3.6,1.3,versicolor
+// 6.7,3.1,4.4,1.4,versicolor
+// 5.6,3,4.5,1.5,versicolor
+// 5.8,2.7,4.1,1,versicolor
+// 6.2,2.2,4.5,1.5,versicolor
+// 5.6,2.5,3.9,1.1,versicolor
+// 5.9,3.2,4.8,1.8,versicolor
+// 6.1,2.8,4,1.3,versicolor
+// 6.3,2.5,4.9,1.5,versicolor
+// 6.1,2.8,4.7,1.2,versicolor
+// 6.4,2.9,4.3,1.3,versicolor
+// 6.6,3,4.4,1.4,versicolor
+// 6.8,2.8,4.8,1.4,versicolor
+// 6.7,3,5,1.7,versicolor
+// 6,2.9,4.5,1.5,versicolor
+// 5.7,2.6,3.5,1,versicolor
+// 5.5,2.4,3.8,1.1,versicolor
+// 5.5,2.4,3.7,1,versicolor
+// 5.8,2.7,3.9,1.2,versicolor
+// 6,2.7,5.1,1.6,versicolor
+// 5.4,3,4.5,1.5,versicolor
+// 6,3.4,4.5,1.6,versicolor
+// 6.7,3.1,4.7,1.5,versicolor
+// 6.3,2.3,4.4,1.3,versicolor
+// 5.6,3,4.1,1.3,versicolor
+// 5.5,2.5,4,1.3,versicolor
+// 5.5,2.6,4.4,1.2,versicolor
+// 6.1,3,4.6,1.4,versicolor
+// 5.8,2.6,4,1.2,versicolor
+// 5,2.3,3.3,1,versicolor
+// 5.6,2.7,4.2,1.3,versicolor
+// 5.7,3,4.2,1.2,versicolor
+// 5.7,2.9,4.2,1.3,versicolor
+// 6.2,2.9,4.3,1.3,versicolor
+// 5.1,2.5,3,1.1,versicolor
+// 5.7,2.8,4.1,1.3,versicolor
+// 6.3,3.3,6,2.5,virginica
+// 5.8,2.7,5.1,1.9,virginica
+// 7.1,3,5.9,2.1,virginica
+// 6.3,2.9,5.6,1.8,virginica
+// 6.5,3,5.8,2.2,virginica
+// 7.6,3,6.6,2.1,virginica
+// 4.9,2.5,4.5,1.7,virginica
+// 7.3,2.9,6.3,1.8,virginica
+// 6.7,2.5,5.8,1.8,virginica
+// 7.2,3.6,6.1,2.5,virginica
+// 6.5,3.2,5.1,2,virginica
+// 6.4,2.7,5.3,1.9,virginica
+// 6.8,3,5.5,2.1,virginica
+// 5.7,2.5,5,2,virginica
+// 5.8,2.8,5.1,2.4,virginica
+// 6.4,3.2,5.3,2.3,virginica
+// 6.5,3,5.5,1.8,virginica
+// 7.7,3.8,6.7,2.2,virginica
+// 7.7,2.6,6.9,2.3,virginica
+// 6,2.2,5,1.5,virginica
+// 6.9,3.2,5.7,2.3,virginica
+// 5.6,2.8,4.9,2,virginica
+// 7.7,2.8,6.7,2,virginica
+// 6.3,2.7,4.9,1.8,virginica
+// 6.7,3.3,5.7,2.1,virginica
+// 7.2,3.2,6,1.8,virginica
+// 6.2,2.8,4.8,1.8,virginica
+// 6.1,3,4.9,1.8,virginica
+// 6.4,2.8,5.6,2.1,virginica
+// 7.2,3,5.8,1.6,virginica
+// 7.4,2.8,6.1,1.9,virginica
+// 7.9,3.8,6.4,2,virginica
+// 6.4,2.8,5.6,2.2,virginica
+// 6.3,2.8,5.1,1.5,virginica
+// 6.1,2.6,5.6,1.4,virginica
+// 7.7,3,6.1,2.3,virginica
+// 6.3,3.4,5.6,2.4,virginica
+// 6.4,3.1,5.5,1.8,virginica
+// 6,3,4.8,1.8,virginica
+// 6.9,3.1,5.4,2.1,virginica
+// 6.7,3.1,5.6,2.4,virginica
+// 6.9,3.1,5.1,2.3,virginica
+// 5.8,2.7,5.1,1.9,virginica
+// 6.8,3.2,5.9,2.3,virginica
+// 6.7,3.3,5.7,2.5,virginica
+// 6.7,3,5.2,2.3,virginica
+// 6.3,2.5,5,1.9,virginica
+// 6.5,3,5.2,2,virginica
+// 6.2,3.4,5.4,2.3,virginica
+// 5.9,3,5.1,1.8,virginica`
 
 export default MatrixData;

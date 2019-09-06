@@ -18,7 +18,9 @@ const data = d3.csvParse(MatrixData, d3.autoType)
 
 class Matrix extends Component {
     componentDidMount() {
+        console.log(data);
         this.drawChart();
+
     }
 
     xAxis() {
