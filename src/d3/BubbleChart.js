@@ -38,9 +38,9 @@ class BubbleChart extends Component {
         }));
 
     drawChart() {
-        const data = this.toDataUseD3(BubbleData),
-            format = d3.format(',d'),
-            root = this.pack(data);
+        const data = this.toDataUseD3(BubbleData);
+        const format = d3.format(',d');
+        const root = this.pack(data);
 
         // console.log(this.toData(BubbleData2));
         // console.log(this.toDataUseD3(BubbleData2));
