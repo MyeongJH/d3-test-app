@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import UiTest from './UiTest';
+import ToJson from './ToJson';
 import BarChart from './d3/BarChart';
 import TreeMap from './d3/TreeMap';
 import BubbleChart from './d3/BubbleChart';
@@ -106,6 +107,10 @@ const routes = [
         name: 'LineChart',
         path: baseUrl + 'LineChart',
         render: () => <LineChart />
+    },{
+        name: 'ToJson',
+        path: baseUrl + 'ToJson',
+        render: () => <ToJson />
     }
 ];
 
