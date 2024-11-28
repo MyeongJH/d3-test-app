@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import UiTest from './UiTest';
 import ToJson from './ToJson';
+import DeepLinkTest from './DeepLinkTest';
 import BarChart from './d3/BarChart';
 import TreeMap from './d3/TreeMap';
 import BubbleChart from './d3/BubbleChart';
@@ -111,6 +112,10 @@ const routes = [
         name: 'ToJson',
         path: baseUrl + 'ToJson',
         render: () => <ToJson />
+    },{
+        name: 'DeepLinkTest',
+        path: baseUrl + 'DeepLinkTest',
+        render: () => <DeepLinkTest />
     }
 ];
 
